@@ -1,0 +1,9 @@
+[packages]
+opencv-python = "*"
+flask = "*"
+flask-socketio = "*"
+eventlet = "*"
+numpy = "*"
+
+[requires]
+python_version = "3.8"
