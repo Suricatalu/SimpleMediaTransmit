@@ -14,7 +14,7 @@ This project aims to test the performance of video transmission between two devi
 1. Ensure `pipenv` is installed.
 2. Run the following command in the project root directory to install dependencies:
    ```
-   pipenv install
+   pipenv install --deploy --ignore-pipfile
    ```
 3. Start the transmitter:
    ```
@@ -24,7 +24,3 @@ This project aims to test the performance of video transmission between two devi
    ```
    pipenv run python src/receiver.py
    ```
-
-## Notes
-- This project is designed as open-source. Contributions are welcome.
-- The video format is mp4.
