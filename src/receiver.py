@@ -37,11 +37,11 @@ def receive_video(host='0.0.0.0', port=5000):
                     else:
                         print("Error: Frame is None after decoding, skipping...")
                         # Send ACK even if the frame is None to avoid blocking the transmitter
-                        sock.sendto(b"ACK", addr)
+                        sock.sendto(b"ACK_NONE", addr)
                 except cv2.error as e:
                     print(f"Error decoding frame: {e}, skipping...")
                     # Send ACK even if decoding fails to avoid blocking the transmitter
-                    sock.sendto(b"ACK", addr)
+                    sock.sendto(b"ACK_Error", addr)
 
                 # Reset buffer for the next frame
                 buffer = b''
